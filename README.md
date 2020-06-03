@@ -1,3 +1,9 @@
+
+# Weather Mate
+
+![Alt text](./public/images/app-screen.png?raw=true "Optional Title")
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
