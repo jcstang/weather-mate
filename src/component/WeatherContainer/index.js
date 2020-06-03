@@ -1,16 +1,15 @@
 import React from 'react';
-import WeatherCard from './WeatherCard';
+import WeatherCard from '../WeatherCard';
 
 export default function WeatherContainer(props) {
   return (
     <div className="container">
       <div className="columns is-centered is-full-mobile">
-        <WeatherCard />
-        <WeatherCard />
-        <WeatherCard />
-        <WeatherCard />
-        <WeatherCard />
-        <WeatherCard />
+        {
+          props.data.map((dayItem, index) => (
+            <WeatherCard weatherData={dayItem} />
+          ))
+        }
 
       </div>
     </div>

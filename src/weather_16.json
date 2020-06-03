@@ -1,0 +1,51 @@
+{
+  "city":{
+    "id":14256,
+    "name":"Azadshahr",
+    "findname":"AZADSHAHR",
+    "country":"IR",
+    "coord":{
+      "lon":48.570728,
+      "lat":34.790878
+    },
+    "zoom":10
+  },
+  "time":1554462304,
+  "main":{
+    "temp":287.07,
+    "pressure":1022,
+    "humidity":71,
+    "temp_min":284.15,
+    "temp_max":289.15
+  },
+  "wind":{
+    "speed":4.1,
+    "deg":340
+  },
+  "clouds":{
+    "all":90
+  },
+  "weather":[
+    {"id":804,"main":"Clouds","description":"overcast clouds","icon":"04d"}
+  ]
+}
+{"city":{"id":56166,"name":"Jilib","findname":"JILIB","country":"SO","coord":{"lon":42.785351,"lat":0.48829},"zoom":9},"time":1554462304,"main":{"temp":309.929,"pressure":1008.39,"humidity":36,"temp_min":309.929,"temp_max":309.929},"wind":{"speed":5.72,"deg":104},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}]}
+{"city":{"id":55671,"name":"Kismaayo","findname":"KISMAAYO","country":"SO","coord":{"lon":42.545361,"lat":-0.35817},"zoom":6},"time":1554462304,"main":{"temp":301.329,"pressure":1009.87,"humidity":100,"temp_min":301.329,"temp_max":301.329},"wind":{"speed":6.12,"deg":103.5},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}]}
+{"city":{"id":60019,"name":"Eyl","findname":"EYL","country":"SO","coord":{"lon":49.816399,"lat":7.9803},"zoom":5},"time":1554462304,"main":{"temp":302.229,"pressure":1010.67,"humidity":80,"temp_min":302.229,"temp_max":302.229},"wind":{"speed":5.02,"deg":111.5},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}]}
+{"city":{"id":23814,"name":"Kahriz","findname":"KAHRIZ","country":"IR","coord":{"lon":47.055302,"lat":34.383801},"zoom":7},"time":1554462304,"main":{"temp":285.62,"pressure":1021,"humidity":66,"temp_min":285.15,"temp_max":286.15},"wind":{"speed":2.1,"deg":150},"clouds":{"all":75},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}]}
+{"city":{"id":53654,"name":"Mogadishu","findname":"MOGADISHU","country":"SO","coord":{"lon":45.34375,"lat":2.03711},"zoom":1},"time":1554462304,"main":{"temp":305.15,"pressure":1011,"humidity":59,"temp_min":305.15,"temp_max":305.15},"wind":{"speed":5.1,"deg":100},"clouds":{"all":75},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}]}
+{"city":{"id":62691,"name":"Ceerigaabo","findname":"CEERIGAABO","country":"SO","coord":{"lon":47.36795,"lat":10.61616},"zoom":7},"time":1554462304,"main":{"temp":303.229,"pressure":1008.79,"humidity":36,"temp_min":303.229,"temp_max":303.229},"wind":{"speed":0.87,"deg":1.5},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}]}
+{"city":{"id":64460,"name":"Beledweyne","findname":"BELEDWEYNE","country":"SO","coord":{"lon":45.203609,"lat":4.73583},"zoom":7},"time":1554462304,"main":{"temp":310.029,"pressure":1007.83,"humidity":31,"temp_min":310.029,"temp_max":310.029},"wind":{"speed":3.82,"deg":103},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}]}
+{"city":{"id":64536,"name":"Baydhabo","findname":"BAYDHABO","country":"SO","coord":{"lon":43.649799,"lat":3.11383},"zoom":7},"time":1554462304,"main":{"temp":309.079,"pressure":1007.83,"humidity":35,"temp_min":309.079,"temp_max":309.079},"wind":{"speed":4.82,"deg":105},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}]}
+{"city":{"id":32723,"name":"Istgah-e Garmsar","findname":"ISTGAH-E GARMSAR","country":"IR","coord":{"lon":52.309422,"lat":35.23455},"zoom":8},"time":1554462304,"main":{"temp":291.529,"pressure":1014.75,"humidity":35,"temp_min":291.529,"temp_max":291.529},"wind":{"speed":1.42,"deg":316},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}]}
+{"city":{"id":18918,"name":"Protaras","findname":"PROTARAS","country":"CY","coord":{"lon":34.058331,"lat":35.012501},"zoom":6},"time":1554462304,"main":{"temp":290.35,"pressure":1015,"humidity":72,"temp_min":289.82,"temp_max":291.15},"wind":{"speed":3.6,"deg":90},"clouds":{"all":75},"weather":[{"id":201,"main":"Thunderstorm","description":"thunderstorm with rain","icon":"11d"}]}
+{"city":{"id":32767,"name":"Qarchak","findname":"QARCHAK","country":"IR","coord":{"lon":51.56889,"lat":35.439442},"zoom":9},"time":1554462304,"main":{"temp":294.25,"pressure":1020,"humidity":22,"temp_min":293.15,"temp_max":295.15},"wind":{"speed":2.1,"deg":150},"clouds":{"all":75},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}]}
+{"city":{"id":62788,"name":"Ceeldheer","findname":"CEELDHEER","country":"SO","coord":{"lon":47.180641,"lat":3.84878},"zoom":6},"time":1554462304,"main":{"temp":302.479,"pressure":1010.47,"humidity":92,"temp_min":302.479,"temp_max":302.479},"wind":{"speed":5.47,"deg":93.5},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}]}
+{"city":{"id":56335,"name":"Jawhar","findname":"JAWHAR","country":"SO","coord":{"lon":45.500481,"lat":2.78087},"zoom":8},"time":1554462304,"main":{"temp":310.279,"pressure":1008.47,"humidity":31,"temp_min":310.279,"temp_max":310.279},"wind":{"speed":4.87,"deg":99},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}]}
+{"city":{"id":41210,"name":"Khorram Darreh","findname":"KHORRAM DARREH","country":"IR","coord":{"lon":49.195999,"lat":36.213001},"zoom":12},"time":1554462304,"main":{"temp":285.579,"pressure":1015.99,"humidity":56,"temp_min":285.579,"temp_max":285.579},"wind":{"speed":2.77,"deg":172},"clouds":{"all":80},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}]}
+{"city":{"id":24851,"name":"Nurabad","findname":"NURABAD","country":"IR","coord":{"lon":47.9725,"lat":34.073399},"zoom":9},"time":1554462304,"main":{"temp":281.279,"pressure":1014.03,"humidity":99,"temp_min":281.279,"temp_max":281.279},"wind":{"speed":0.92,"deg":135.5},"clouds":{"all":80},"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}]}
+{"city":{"id":56084,"name":"Gobolka Jubbada Dhexe","findname":"GOBOLKA JUBBADA DHEXE","country":"SO","coord":{"lon":42.666672,"lat":1.33333},"zoom":16},"time":1554462304,"main":{"temp":310.079,"pressure":1007.79,"humidity":35,"temp_min":310.079,"temp_max":310.079},"wind":{"speed":4.82,"deg":99.5},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}]}
+{"city":{"id":69558,"name":"Yarīm","findname":"YARĪM","country":"YE","coord":{"lon":44.31176,"lat":14.25388},"zoom":16},"time":1554462304,"main":{"temp":296.729,"pressure":1006.51,"humidity":33,"temp_min":296.729,"temp_max":296.729},"wind":{"speed":1.72,"deg":234.5},"clouds":{"all":64},"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}]}
+{"city":{"id":57000,"name":"Hobyo","findname":"HOBYO","country":"SO","coord":{"lon":48.526798,"lat":5.3505},"zoom":16},"time":1554462304,"main":{"temp":303.079,"pressure":1010.59,"humidity":65,"temp_min":303.079,"temp_max":303.079},"wind":{"speed":5.22,"deg":97.5},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}]}
+{"city":{"id":70272,"name":"As Suwayda","findname":"AS SUWAYDA","country":"YE","coord":{"lon":45.2304,"lat":13.78694},"zoom":16},"time":1554462304,"main":{"temp":299.629,"pressure":1008.31,"humidity":40,"temp_min":299.629,"temp_max":299.629},"wind":{"speed":1.22,"deg":198.5},"clouds":{"all":88},"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04d"}]}
+{"city":{"id":30748,"name":"Ar Rawnah","findname":"AR RAWNAH","country":"YE","coord":{"lon":43.80286,"lat":13.75638},"zoom":16},"time":1554462304,"main":{"temp":303.579,"pressure":1007.47,"humidity":37,"temp_min":303.579,"temp_max":303.579},"wind":{"speed":1.42,"deg":220.5},"clouds":{"all":88},"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04d"}]}

@@ -30,6 +30,12 @@
   margin-bottom: 2rem;
 }
 
+.app-name {
+  font-family: 'Overlock', cursive;
+  font-size: xx-large;
+  color: white;
+}
+
 .App-link {
   color: #61dafb;
 }
