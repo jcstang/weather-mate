@@ -81,7 +81,11 @@ function App() {
         onSubmitHandler={submitHandler}
       />
       <WeatherContainer data={mockWeather.data}/>
-      <WeatherCard weatherData={{currTemp: currentTemp}} />
+      <WeatherCard weatherData={{
+          currTemp: currentTemp,
+          imageFileName: './images/sunny.svg',
+        }}
+      />
     </div>
   );
 }
