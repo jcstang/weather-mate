@@ -1,25 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './index.css';
 
 
-
-
-const cl = (text) => {
-  return console.log(text);
-};
-
-const CitySearch = () => {
-  const [cityInput, setCityInput] = useState('');
-  
-  const onSubmitHandler = (event) => {
-    event.preventDefault();
-    cl(`ready to search for ${cityInput}`);
-  };
-
-  const onChangeHandler = (event) => {
-    const userInputSearchString = event.target.value;
-    setCityInput(userInputSearchString);
-  };
+const CitySearch = (props) => {
 
   return (
     <div className="container city-search">
@@ -29,10 +12,10 @@ const CitySearch = () => {
             className="input" 
             type="text" 
             placeholder="City Name" 
-            onChange={onChangeHandler}
+            onChange={props.onChangeHandler}
           />
         </div>
-        <div className="control" onClick={onSubmitHandler}>
+        <div className="control" onClick={props.onSubmitHandler}>
           <a className="button is-info" href="/">
             <i className="fas fa-location-arrow"></i>
           </a>
