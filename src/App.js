@@ -4,6 +4,7 @@ import 'bulma/css/bulma.css';
 import './App.css';
 import WeatherContainer from './component/WeatherContainer/index';
 import mockWeather from './data/mockWeatherData';
+import CitySearch from './component/CitySearch';
 
 
 
@@ -17,6 +18,7 @@ function App() {
           </a>
         </div>
       </nav>
+      <CitySearch />
       <WeatherContainer data={mockWeather.data}/>
     </div>
   );
