@@ -296,50 +296,42 @@ function App() {
   // const getForecastString = `https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=minutely&appid=${apiKey}`;
   // const queryString = `https://api.openweathermap.org/data/2.5/weather?q=${citySearchString}&appid=${apiKey}&units=imperial`;
 
-  const getLatAndLonFromString = async () => {
-    let queryStr = `https://api.openweathermap.org/data/2.5/weather?q=${citySearchString}&appid=${apiKey}&units=imperial`;
-    let response = await fetch(queryStr);
-    let data = await response.json();
-    // await setLatitude(data.coord.lat);
-    // await setLongitude(data.coord.lon);
-    return data.coord;
-  };
+  // const getLatAndLonFromString = async () => {
+  //   let queryStr = `https://api.openweathermap.org/data/2.5/weather?q=${citySearchString}&appid=${apiKey}&units=imperial`;
+  //   let response = await fetch(queryStr);
+  //   let data = await response.json();
+  //   // await setLatitude(data.coord.lat);
+  //   // await setLongitude(data.coord.lon);
+  //   return data.coord;
+  // };
 
-  const getForecastFromCoordinates = async (coordinates) => {
-    const latitude = coordinates.lat;
-    const longitude = coordinates.lon;
+  // const getForecastFromCoordinates = async (coordinates) => {
+  //   const latitude = coordinates.lat;
+  //   const longitude = coordinates.lon;
 
-    const getForecastString = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely&appid=${apiKey}`;
-    let response = await fetch(getForecastString);
-    let data = await response.json();
-    return data;
-  };
+  //   const getForecastString = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely&appid=${apiKey}`;
+  //   let response = await fetch(getForecastString);
+  //   let data = await response.json();
+  //   return data;
+  // };
 
-  const setSevenDayForecast = async () => {
-    const getForecastString = `https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=minutely&appid=${apiKey}&units=imperial`;
-    let response = await fetch(getForecastString);
-    let data = await response.json();
-    // console.log(data);
-    // setWeatherData(data.daily);
+  // const setSevenDayForecast = async () => {
+  //   const getForecastString = `https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=minutely&appid=${apiKey}&units=imperial`;
+  //   let response = await fetch(getForecastString);
+  //   let data = await response.json();
 
-    let weatherArray = [];
-    console.log(data.daily);
-    data.daily.forEach(element => {
-      console.log(element);
-      weatherArray.push(element);
-    });
-  }
+  //   let weatherArray = [];
+  //   console.log(data.daily);
+  //   data.daily.forEach(element => {
+  //     console.log(element);
+  //     weatherArray.push(element);
+  //   });
+  // }
 
   const submitHandler = (event) => {
     event.preventDefault();
     console.log(`ready to search for ${citySearchString}`);
-    setSevenDayForecast();
-    // console.log(queryString);
-    // setWeatherData(
-    //   getForecastFromCoordinates(
-    //     getLatAndLonFromString()
-    //   )
-    // );
+    // setSevenDayForecast();
 
   }
 
