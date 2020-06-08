@@ -7,7 +7,7 @@ export default function WeatherContainer(props) {
       <div className="columns is-centered is-full-mobile">
         {
           props.data.map((dayItem, index) => (
-            <WeatherCard weatherData={dayItem} />
+            <WeatherCard key={index} weatherData={dayItem} />
           ))
         }
 
