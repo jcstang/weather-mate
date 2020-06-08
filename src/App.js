@@ -11,9 +11,9 @@ import CitySearch from './component/CitySearch';
 function App() {
   return (
     <div className="App">
-      <nav class="navbar App-nav" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item app-name" href="https://bulma.io">
+      <nav className="navbar App-nav" role="navigation" aria-label="main navigation">
+        <div className="navbar-brand">
+          <a className="navbar-item app-name" href="https://bulma.io">
             Weather Mate
           </a>
         </div>
