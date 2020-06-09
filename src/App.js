@@ -39,12 +39,13 @@ function App() {
         // console.log(data.coord);
         // setWeatherData(convertDataToModel(data));
         try {
-          setCurrentTemp(data.main.temp);
+          // setCurrentTemp(data.main.temp);
 
           //copy data then mutate it
-          const copyWeather = weatherDataList[0].currTemp(data.main.temp);
-
-          setWeatherDataList(weatherDataList => [...weatherDataList, copyWeather]);
+          const copyWeather = weatherDataList[0];
+          copyWeather.currTemp = data.main.temp;
+          
+          // setWeatherDataList(weatherDataList => [...weatherDataList, copyWeather]);
         } catch(err) {
           console.log(err);
         }
