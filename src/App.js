@@ -14,7 +14,6 @@ const createImageString = (imgCode) => {
 function App() {
 
   const iconId = '10d';
-  // const sampleIconUrl = `http://openweathermap.org/img/wn/${iconId}@2x.png`;
   const [currentTemp, setCurrentTemp] = useState(0);
   const [imageFileName, setImageFileName] = useState(createImageString(iconId));
   const [dayOfTheWeek, setDayOfTheWeek] = useState('Sunday');
@@ -25,15 +24,6 @@ function App() {
   const apiKey = 'a41553bf7961d05765a23fa436102cf6';
   const queryString = `https://api.openweathermap.org/data/2.5/weather?q=${citySearchString}&appid=${apiKey}&units=imperial`;
 
-  // const [weatherDataList, setWeatherDataList] = useState([
-  //   {
-  //     currTemp: 1,
-  //     imageFileName: createImageString(iconId),
-  //     day: "Sunday",
-  //     highTemp: 90,
-  //     lowTemp: 40
-  //   }
-  // ]);
 
   const submitHandler = (event) => {
     event.preventDefault();
