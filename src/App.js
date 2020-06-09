@@ -6,12 +6,17 @@ import mockWeather from './data/mockWeatherData';
 import CitySearch from './component/CitySearch';
 // import WeatherCard from './component/WeatherCard';
 
+const createImageString = (imgCode) => {
+  return `http://openweathermap.org/img/wn/${imgCode}@2x.png`;
+}
+
 
 function App() {
 
   const iconId = '10d';
   const sampleIconUrl = `http://openweathermap.org/img/wn/${iconId}@2x.png`;
   const [currentTemp, setCurrentTemp] = useState(69);
+  const [imageFileName, setImageFileName] = useState(sampleIconUrl);
   
   const [citySearchString, setCitySearchString] = useState('Chicago');
   const apiKey = 'a41553bf7961d05765a23fa436102cf6';
@@ -20,12 +25,13 @@ function App() {
   const [weatherDataList, setWeatherDataList] = useState([
     {
       currTemp: 1,
-      imageFileName: sampleIconUrl,
+      imageFileName: createImageString(iconId),
       day: "Sunday",
       highTemp: 90,
       lowTemp: 40
     }
   ]);
+
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -45,7 +51,7 @@ function App() {
           const copyWeather = weatherDataList[0];
           copyWeather.currTemp = data.main.temp;
           
-          // setWeatherDataList(weatherDataList => [...weatherDataList, copyWeather]);
+          setWeatherDataList(weatherDataList => [...weatherDataList, copyWeather]);
         } catch(err) {
           console.log(err);
         }
