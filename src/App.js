@@ -4,23 +4,26 @@ import './App.css';
 import WeatherContainer from './component/WeatherContainer/index';
 import mockWeather from './data/mockWeatherData';
 import CitySearch from './component/CitySearch';
-import WeatherCard from './component/WeatherCard';
+// import WeatherCard from './component/WeatherCard';
+
+const createImageString = (imgCode) => {
+  return `http://openweathermap.org/img/wn/${imgCode}@2x.png`;
+}
 
 
 function App() {
 
-  const [citySearchString, setCitySearchString] = useState('Chicago');
-  const [currentTemp, setCurrentTemp] = useState(69);
-  const [dayData, setDayData] = useState({
-    day: "Sunday",
-    imageFileName: "./images/rain.svg",
-    currTemp: 45,
-    highTemp: 90
-  });
+  const iconId = '10d';
+  const [currentTemp, setCurrentTemp] = useState(0);
+  const [imageFileName, setImageFileName] = useState(createImageString(iconId));
+  const [dayOfTheWeek, setDayOfTheWeek] = useState('Sunday');
+  const [highTemp, setHighTemp] = useState(0);
+  const [lowTemp, setLowTemp] = useState(0);
 
+  const [citySearchString, setCitySearchString] = useState('Chicago');
   const apiKey = 'a41553bf7961d05765a23fa436102cf6';
-  // const queryString = 'api.openweathermap.org/data/2.5/weather?q' + citySearchString +'&appid=' + apiKey;
   const queryString = `https://api.openweathermap.org/data/2.5/weather?q=${citySearchString}&appid=${apiKey}&units=imperial`;
+
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -34,7 +37,16 @@ function App() {
         // console.log(data.coord);
         // setWeatherData(convertDataToModel(data));
         try {
+          // setCurrentTemp(data.main.temp);
+
+          //copy data then mutate it
+          // const copyWeather = weatherDataList[0];
+          // copyWeather.currTemp = data.main.temp;
+          // setWeatherDataList(weatherDataList => [...weatherDataList, copyWeather]);
           setCurrentTemp(data.main.temp);
+          setHighTemp(data.main.temp_max);
+          setLowTemp(data.main.temp_min);
+
         } catch(err) {
           console.log(err);
         }
@@ -42,23 +54,6 @@ function App() {
       .catch((error) => {
         console.log(error);
       });
-
-    // fetch(queryString)
-    //   .then(response => response.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
-
-    // fetch(queryString)
-    // .then(response => response.json())
-    // .then((data) => {
-    //   console.log(data);
-    //   // console.log(data.main.temp);
-    //   // console.log(data.coord);
-    // });
 
   }
 
@@ -80,8 +75,22 @@ function App() {
         onChangeHandler={onChangeHelper}
         onSubmitHandler={submitHandler}
       />
-      <WeatherContainer data={mockWeather.data}/>
-      <WeatherCard weatherData={{currTemp: currentTemp}} />
+      <div className='container'>
+        <p className="title">Welcome, to <strong>{citySearchString}</strong>!</p>
+      </div>
+      <WeatherContainer data={mockWeather.data} />
+      {/* <WeatherContainer data={weatherDataList} /> */}
+      <WeatherContainer 
+        data={[
+          {
+            day: dayOfTheWeek,
+            imageFileName: imageFileName,
+            currTemp: currentTemp,
+            highTemp: highTemp,
+            lowTemp: lowTemp
+          }
+        ]} 
+      />
     </div>
   );
 }
