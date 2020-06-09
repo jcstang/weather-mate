@@ -85,6 +85,9 @@ function App() {
         onChangeHandler={onChangeHelper}
         onSubmitHandler={submitHandler}
       />
+      <div className='container'>
+        <p className="title">Welcome, to <strong>{citySearchString}</strong>!</p>
+      </div>
       <WeatherContainer data={mockWeather.data} />
       {/* <WeatherContainer data={weatherDataList} /> */}
       <WeatherContainer 
