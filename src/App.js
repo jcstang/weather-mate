@@ -4,23 +4,28 @@ import './App.css';
 import WeatherContainer from './component/WeatherContainer/index';
 import mockWeather from './data/mockWeatherData';
 import CitySearch from './component/CitySearch';
-import WeatherCard from './component/WeatherCard';
+// import WeatherCard from './component/WeatherCard';
 
 
 function App() {
 
-  const [citySearchString, setCitySearchString] = useState('Chicago');
+  const iconId = '10d';
+  const sampleIconUrl = `http://openweathermap.org/img/wn/${iconId}@2x.png`;
   const [currentTemp, setCurrentTemp] = useState(69);
-  const [dayData, setDayData] = useState({
-    day: "Sunday",
-    imageFileName: "./images/rain.svg",
-    currTemp: 45,
-    highTemp: 90
-  });
-
+  
+  const [citySearchString, setCitySearchString] = useState('Chicago');
   const apiKey = 'a41553bf7961d05765a23fa436102cf6';
-  // const queryString = 'api.openweathermap.org/data/2.5/weather?q' + citySearchString +'&appid=' + apiKey;
   const queryString = `https://api.openweathermap.org/data/2.5/weather?q=${citySearchString}&appid=${apiKey}&units=imperial`;
+
+  const [weatherDataList, setWeatherDataList] = useState([
+    {
+      currTemp: 1,
+      imageFileName: sampleIconUrl,
+      day: "Sunday",
+      highTemp: 90,
+      lowTemp: 40
+    }
+  ]);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -35,6 +40,11 @@ function App() {
         // setWeatherData(convertDataToModel(data));
         try {
           setCurrentTemp(data.main.temp);
+
+          //copy data then mutate it
+          const copyWeather = weatherDataList[0].currTemp(data.main.temp);
+
+          setWeatherDataList(weatherDataList => [...weatherDataList, copyWeather]);
         } catch(err) {
           console.log(err);
         }
@@ -42,23 +52,6 @@ function App() {
       .catch((error) => {
         console.log(error);
       });
-
-    // fetch(queryString)
-    //   .then(response => response.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
-
-    // fetch(queryString)
-    // .then(response => response.json())
-    // .then((data) => {
-    //   console.log(data);
-    //   // console.log(data.main.temp);
-    //   // console.log(data.coord);
-    // });
 
   }
 
@@ -80,12 +73,8 @@ function App() {
         onChangeHandler={onChangeHelper}
         onSubmitHandler={submitHandler}
       />
-      <WeatherContainer data={mockWeather.data}/>
-      <WeatherCard weatherData={{
-          currTemp: currentTemp,
-          imageFileName: './images/sunny.svg',
-        }}
-      />
+      <WeatherContainer data={mockWeather.data} />
+      <WeatherContainer data={weatherDataList} />
     </div>
   );
 }
