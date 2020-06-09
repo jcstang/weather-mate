@@ -21,7 +21,7 @@ function App() {
   const [lowTemp, setLowTemp] = useState(0);
 
   const [citySearchString, setCitySearchString] = useState('Chicago');
-  const apiKey = 'a41553bf7961d05765a23fa436102cf6';
+  const apiKey = process.env.REACT_APP_API_KEY;
   const queryString = `https://api.openweathermap.org/data/2.5/weather?q=${citySearchString}&appid=${apiKey}&units=imperial`;
 
 
