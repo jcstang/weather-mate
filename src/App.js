@@ -4,7 +4,10 @@ import './App.css';
 import WeatherContainer from './component/WeatherContainer/index';
 import mockWeather from './data/mockWeatherData';
 import CitySearch from './component/CitySearch';
+import NavBar from './component/NavBar';
+// import helperFunctions from './utils/testing';
 // import WeatherCard from './component/WeatherCard';
+// import helperFunctions from './utils/helpers';
 
 const createImageString = (imgCode) => {
   return `http://openweathermap.org/img/wn/${imgCode}@2x.png`;
@@ -47,7 +50,7 @@ function App() {
           setHighTemp(data.main.temp_max);
           setLowTemp(data.main.temp_min);
 
-        } catch(err) {
+        } catch (err) {
           console.log(err);
         }
       })
@@ -64,13 +67,7 @@ function App() {
 
   return (
     <div className="App">
-      <nav className="navbar App-nav" role="navigation" aria-label="main navigation">
-        <div className="navbar-brand">
-          <a className="navbar-item app-name" href="https://bulma.io">
-            Weather Mate
-          </a>
-        </div>
-      </nav>
+      <NavBar />
       <CitySearch
         onChangeHandler={onChangeHelper}
         onSubmitHandler={submitHandler}
@@ -79,8 +76,7 @@ function App() {
         <p className="title">Welcome, to <strong>{citySearchString}</strong>!</p>
       </div>
       <WeatherContainer data={mockWeather.data} />
-      {/* <WeatherContainer data={weatherDataList} /> */}
-      <WeatherContainer 
+      <WeatherContainer
         data={[
           {
             day: dayOfTheWeek,
@@ -89,7 +85,7 @@ function App() {
             highTemp: highTemp,
             lowTemp: lowTemp
           }
-        ]} 
+        ]}
       />
     </div>
   );

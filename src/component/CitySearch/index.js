@@ -8,10 +8,10 @@ const CitySearch = (props) => {
     <div className="container city-search">
       <div className="field has-addons" >
         <div className="control">
-          <input 
-            className="input" 
-            type="text" 
-            placeholder="City Name" 
+          <input
+            className="input"
+            type="text"
+            placeholder="City Name"
             onChange={props.onChangeHandler}
           />
         </div>
