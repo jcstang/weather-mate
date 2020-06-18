@@ -75,7 +75,6 @@ function App() {
       <div className='container'>
         <p className="title">Welcome, to <strong>{citySearchString}</strong>!</p>
       </div>
-      <WeatherContainer data={mockWeather.data} />
       <WeatherContainer
         data={[
           {
@@ -87,6 +86,7 @@ function App() {
           }
         ]}
       />
+      <WeatherContainer data={mockWeather.data} />
     </div>
   );
 }
